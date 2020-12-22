@@ -1,6 +1,11 @@
 const express = require("express");
 const bodyParser = require('body-parser');
-const markdownIt = require('markdown-it');
+const markdownIt = require('markdown-it')({
+  html:true,
+  breaks:true,
+  linkify:false,
+  typographer:true
+});
 const md = new markdownIt();
 
 var app = express();
